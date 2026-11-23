@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #060B18;
+    color: #F8FAFC;
+    color-scheme: dark;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom Modern Navy Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #060B18;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E3264;
+    border-radius: 5px;
+    border: 2px solid #060B18;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B5BA5;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #93C5FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #818CF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card {
+    background: rgba(15, 26, 56, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(35, 56, 119, 0.45);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-hover:hover {
+    background: rgba(20, 33, 71, 0.85);
+    border-color: rgba(56, 189, 248, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px -10px rgba(2, 6, 23, 0.8), 0 0 20px -5px rgba(56, 189, 248, 0.15);
+  }
+
+  .glass-nav {
+    background: rgba(6, 11, 24, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(35, 56, 119, 0.4);
+  }
+
+  .badge-navy {
+    background: rgba(20, 33, 71, 0.6);
+    border: 1px solid rgba(35, 56, 119, 0.6);
+    color: #93C5FD;
+  }
+
+  .bg-radial-navy {
+    background: radial-gradient(circle at 50% 0%, rgba(20, 33, 71, 0.5) 0%, rgba(6, 11, 24, 0) 70%);
+  }
+
+  .bg-mesh-pattern {
+    background-image: 
+      radial-gradient(at 10% 20%, rgba(35, 56, 119, 0.25) 0px, transparent 50%),
+      radial-gradient(at 90% 80%, rgba(14, 165, 233, 0.1) 0px, transparent 50%);
+  }
+}
